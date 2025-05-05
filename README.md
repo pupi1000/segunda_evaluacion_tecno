@@ -1,5 +1,9 @@
 # Microservicio - Evaluación Tecnologías Web II
 
+https://docs.google.com/document/d/1o7-U2wm-yWZA5dKs7gnNC1p0YLv7ut-RcFxRg4t5zFI/edit?usp=sharing
+
+LINK PARA LAS CAPTURAS DE PANTALLA
+
 Este es un microservicio independiente desarrollado como parte de la evaluación de Tecnologías Web II. Su objetivo principal es consumir un endpoint específico del "Proyecto Integrador" (el backend de gestión de documentos de un amigo), procesar la información obtenida (documentos) y almacenarla localmente en una base de datos SQLite, exponiendo a su vez un endpoint propio para desencadenar este proceso.
 
 ## 1. Análisis del Proyecto Integrador (Según requerimiento de evaluación)
@@ -115,10 +119,10 @@ Este es un microservicio independiente desarrollado como parte de la evaluación
 
 ## 4. Pruebas y Documentación (Según requerimiento de evaluación)
 
-* **Evidencias Funcionales (Punto 4.1):** [Aquí debes describir o enlazar TUS capturas de pantalla o video. Necesitas demostrar la ejecución exitosa del endpoint POST `/api/v1/process-documents` en Postman y mostrar que los datos correspondientes aparecen en la base de datos SQLite.]
+* **Evidencias Funcionales (Punto 4.1):** 
     * *Ejemplo de Evidencia:* Captura de Postman mostrando la petición `POST http://localhost:3000/api/v1/process-documents` y la respuesta `200 OK` con la lista de documentos. Captura de pantalla de "DB Browser for SQLite" mostrando la tabla `processed_documents` con los datos guardados después de ejecutar la petición.
 * **Pruebas (Punto 4.2):** [Describe las pruebas manuales que realizaste para verificar el funcionamiento.]
-    * *Ejemplo de Prueba Manual:* 1. Asegurarse de que ambos backends (amigo y propio) estén corriendo. 2. Enviar una petición `POST` a `/api/v1/process-documents` usando Postman. 3. Verificar en la consola del microservicio que se realizó el login (si fue necesario) y la obtención de documentos. 4. Verificar la respuesta 200 OK en Postman y el contenido retornado. 5. Abrir la base de datos `database.sqlite` y confirmar que los documentos se guardaron o actualizaron correctamente en la tabla `processed_documents`. 6. (Opcional) Enviar una petición `GET` a `/api/v1/processed-documents` para verificar que se recuperan los datos de la base de datos SQLite.
+    * *Ejemplo de Prueba Manual:* 1. Asegurarse de que ambos backends estén corriendo. 2. Enviar una petición `POST` a `/api/v1/process-documents` usando Postman. 3. Verificar en la consola del microservicio que se realizó el login (si fue necesario) y la obtención de documentos. 4. Verificar la respuesta 200 OK en Postman y el contenido retornado. 5. Abrir la base de datos `database.sqlite` y confirmar que los documentos se guardaron o actualizaron correctamente en la tabla `processed_documents`. 6. (Opcional) Enviar una petición `GET` a `/api/v1/processed-documents` para verificar que se recuperan los datos de la base de datos SQLite.
 * **Documentación Adicional (Punto 4.3):** Este documento `README.md` (y el PDF final basado en él) sirve como la documentación principal del microservicio.
 
 ## 5. Presentación Final (Según requerimiento de evaluación)
@@ -140,9 +144,6 @@ Este es un microservicio independiente desarrollado como parte de la evaluación
 
 ---
 
-**2. Contenido para el Documento PDF de la Evaluación**
-
-Copia todo el texto a partir de aquí hasta el final, pégalo en un editor de documentos (Word, Google Docs, etc.), añade las capturas de pantalla donde se indica, y guarda el resultado como un archivo PDF.
 
 ---
 
@@ -155,9 +156,9 @@ Copia todo el texto a partir de aquí hasta el final, pégalo en un editor de do
 
 **Diseño e Implementación de Microservicio Independiente**
 
-**Estudiante:** [Tu Nombre Completo]
-**Docente:** [Nombre del Docente]
-**Fecha:** [Fecha de Entrega]
+**Estudiante:** [Einar Guillen]
+**Docente:** [Miguel Pacheco]
+**Fecha:** [4/5/2025]
 
 ---
 
@@ -261,7 +262,7 @@ El backend identificado como "Proyecto Integrador" para esta evaluación es un s
         D -- Envía Respuesta 200 OK --> B;
         B -- Respuesta JSON --> A;
     ```
-    **[Incluir aquí una imagen del diagrama de flujo si usaste una herramienta visual en lugar de Mermaid]**
+    
 
 **4. Implementación Técnica**
 
@@ -321,11 +322,8 @@ El backend identificado como "Proyecto Integrador" para esta evaluación es un s
 * **Evidencias Funcionales (Punto 4.1):**
     A continuación, se adjuntan las capturas de pantalla que evidencian la ejecución exitosa de las pruebas funcionales.
 
-    **[Adjuntar Captura 1: Petición POST en Postman a `/api/v1/process-documents` con respuesta 200 OK y cuerpo JSON]**
+    
 
-    **[Adjuntar Captura 2: Contenido de la tabla `processed_documents` en DB Browser for SQLite mostrando los datos guardados]**
-
-    *(Opcional: Adjuntar Captura 3: Logs de la terminal del microservicio mostrando el proceso de login/fetch/save. Opcional: Captura 4: Petición GET en Postman a `/api/v1/processed-documents` mostrando los datos de SQLite).*
 
 * **Documentación del Código (Punto 4.3):**
     La documentación del código fuente se encuentra en los comentarios dentro de los archivos `.js` del proyecto y en el archivo `README.md`. Este documento PDF complementa esa documentación detallando el análisis, diseño y resultados de las pruebas.
